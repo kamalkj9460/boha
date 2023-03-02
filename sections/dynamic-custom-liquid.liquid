@@ -6,7 +6,7 @@
 </script>
 
 <section class="custom-liquid--container">
-  {{ section.settings.custom_liquid }}
+  {{ section.settings.custom_liquid | replace: '<script type="text/javascript">', '<script type="lazyload_int">' }}
 </section>
 
 {% schema %}

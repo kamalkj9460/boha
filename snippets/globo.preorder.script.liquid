@@ -79,8 +79,8 @@
   {% endif %}
 </script>
 
-<script src="{{ 'globo.preorder.data.min.js' | asset_url }}" type="text/javascript" defer></script>
-<script src="{{ 'globo.preorder.min.js' | asset_url }}" type="text/javascript" defer></script>
+<script data-src="{{ 'globo.preorder.data.min.js' | asset_url }}" type="lazyload_int" defer></script>
+<script data-src="{{ 'globo.preorder.min.js' | asset_url }}" type="lazyload_int" defer></script>
 
 
 {% capture GP_appScript %}{{ 'globo.preorder.min.js' | asset_url }}{% endcapture %}
@@ -117,4 +117,5 @@
     }
   }((window.jQuery||window.$)))
 </script>
-{{ 'globo.preorder.css' | asset_url | stylesheet_tag }}
+
+<link data-href="{{ 'globo.preorder.css' | asset_url }}" rel="stylesheet" />
